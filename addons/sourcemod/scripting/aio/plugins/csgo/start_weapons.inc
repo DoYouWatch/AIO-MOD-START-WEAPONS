@@ -17,11 +17,12 @@
 #define WEAPONS_LOADED
 #define WEAPONS_CSGO_LOADED
 
-#define TAG_START_WEAPON_CSGO "[AIO START WEAPON] - "
-#define CSGO_ITEM_NAME_LEN 32
-#define CSGO_ITEMS_TYPES_NUM 12
-#define CSGO_SLOT_KNIFE 2
-#define CSGO_TEAMS_NUM 4
+#define TAG_START_WEAPON_CSGO 					"[AIO START WEAPON] - "
+#define PLUGIN_VERSION_START_WEAPON_CSGO		"1.0.0"
+#define CSGO_ITEM_NAME_LEN 						32
+#define CSGO_ITEMS_TYPES_NUM 					12
+#define CSGO_SLOT_KNIFE 						2
+#define CSGO_TEAMS_NUM 							4
 
 //***********************************//
 //***********PARAMETERS**************//
@@ -93,7 +94,7 @@ new String:S_teams_items[CSGO_TEAMS_NUM][CSGO_ITEMS_TYPES_NUM][CSGO_ITEM_NAME_LE
 /***********************************************************/
 public OnPluginStartStartWeaponCsgo()
 {
-	CreateConVar("aio_start_weapon_version", PLUGIN_VERSION, "Version", CVARS);
+	CreateConVar("aio_start_weapon_version", PLUGIN_VERSION_START_WEAPON_CSGO, "Version", CVARS);
 	
 	cvar_active_start_weapon_csgo 					= CreateConVar("active_start_weapon_csgo",  					"0", 					"Enable/Disable Weapons Start", 			DEFAULT_FLAGS, 		true, 0.0, 		true, 1.0);
 	cvar_active_start_weapon_csgo_dev				= CreateConVar("active_start_weapon_csgo_dev", 					"0", 					"Enable/Disable Weapons Start Dev Mod", 	DEFAULT_FLAGS, 		true, 0.0, 		true, 1.0);
